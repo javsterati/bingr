@@ -14,7 +14,7 @@ shows = RestClient.get'http://api.tvmaze.com/shows'
 shows_array = JSON.parse(shows)
 
 shows_array.each do |show|
-    Show.create(title: show["name"], desc: show["summary"], episode_count: rand(20..200), image: show["image"]["medium"], genre: show["genres"][0])
+    Show.create(title: show["name"], desc: show["summary"], episode_count: rand(20..200), image: show["image"]["medium"], genre: show["genres"])
 end
 
 
