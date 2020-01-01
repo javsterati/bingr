@@ -1,0 +1,16 @@
+<%= form_for @user do |f| %>
+        <%= f.label :NAME %>
+        <%= f.text_field :name %>
+        <%= f.label :AGE%>
+        <%= f.text_field :age%>
+        <%= f.label :USERNAME %>
+        <%= f.text_field :username %>
+        <%= f.label :PASSWORD %>
+        <%= f.password_field :password%>
+        <%= f.label :"Confirm Password" %>
+        <%= f.password_field :password_confirmation%>
+        </br>
+        <%= f.submit "SUBMIT"%>
+<% end %>
+
+<%# NEEDS TO CONFIRM CURRENT PASSWORD BEFORE CHANGING %>

@@ -1,0 +1,9 @@
+<h1><%= @user.name %>'s favs </h1>
+
+
+<ul>
+    <% @shows.each do |show| %>
+    <li><img src="<%= show.image %>"></li>
+    <li> <%= show.title %> <%= link_to "REMOVE FAVORITE", delete_fav_path(show) %></li> 
+    <% end  %>
+</ul>

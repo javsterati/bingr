@@ -1,0 +1,7 @@
+{
+    "workbench.colorCustomizations": {
+        "tab.unfocusedActiveBorder": "#fff0",
+        "editor.lineHighlightBackground": "#01fa92a6"
+    },
+    "git.ignoreLimitWarning": true
+}

@@ -1,0 +1,13 @@
+
+<h1>Television Show: <%= @show.title %></h1>
+<h2><%= @show.genre %></h2>
+</br>
+<img src="<%= @show.image %>">
+</br>
+
+<h3>Episode Count: <%= @show.episode_count %></h3>
+
+<p><%=  strip_tags(@show.desc) %></p>
+<%= link_to "ADD TO FAVORITES", add_path(@show)%>
+
+

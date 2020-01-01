@@ -1,0 +1,9 @@
+<h1 align="center">Log in now!</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+<%= f.label :USERNAME %>
+<%= f.text_field :username, class: "form-control", placeholder: "ENTER USERNAME", autofocus: true %>
+<%= f.label :password %>
+<%= f.password_field :password, class: "form-control", placeholder: "ENTER PASSWORD", autocomplete: "off" %>
+<%= f.submit "Log in" %>
+<%end %>
+<%= link_to  "CREATE ACCOUNT", new_user_path %>
