@@ -12,4 +12,53 @@
  *
  *= require_tree .
  *= require_self
+
+ 
  */
+ 
+body {
+    margin:0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    line-height: auto;
+    }
+    
+    ul {
+        margin: 3;
+        padding: 0;
+        list-style: bold;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    
+    h1 {
+        margin: 5;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 28;
+    }
+    
+    h2 {
+        font-family: 'Oswald';
+        font-size: 25px;
+        color: rgb(255, 255, 255)
+    }
+    
+    .container {
+        text-align: center;
+        width: 5 auto;
+        margin:  auto; 
+        overflow: hidden;   
+    }
+    
+    #mainHeader {
+        height: 0 auto;
+        width: 0 auto;
+        margin: 0 auto;
+        font-family: futura;
+        color: rgba(255, 255, 255, 0.719);
+        text-align: center;
+        resize: horizontal;
+        overflow: auto;
+    }           
+    

@@ -1,7 +1,8 @@
-<h1>Shows</h1>
 
-<ul>
-    <% @shows.each do |show| %>
-    <li><%= link_to show.title, show_path(show) %></li>
+<ul class="hoverbox">
+<li class="li-first">
+ <% @shows.each do |show| %>
+   <a href="<%= show_path(show)%>"><img src="<%= show.image %>"/></a>
     <% end %>
-</ul>
+</li>
+

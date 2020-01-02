@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-        before_action :find, only: [:show, :edit, :update, :favs, :destroy, :edit]
+        before_action :find, only: [:show, :edit, :update, :favs, :destroy, :edit, :recommended]
     
          def new 
              @user = User.new
+             render :new, layout: 'layouts/login'
          end
     
          def create
@@ -15,7 +16,12 @@ class UsersController < ApplicationController
          end 
          
          def show
+         end
 
+         def recommended
+         end
+
+         def welcome
          end
 
          def favs
@@ -24,6 +30,7 @@ class UsersController < ApplicationController
          end
      
          def edit
+
          end
      
          def update 

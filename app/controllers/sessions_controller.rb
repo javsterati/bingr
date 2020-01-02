@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
     def new
+        render :new, layout: 'layouts/login'
     end
 
     def create 
+        
         @user = User.find_by(username: params[:session][:username].downcase)
         if @user && @user.password == (params[:session][:password])
             session[:user_id] = @user.id
@@ -12,12 +14,13 @@ class SessionsController < ApplicationController
             flash[:danger] = "NOPE!"
             render:new 
         end
+        
     end
 
     def destroy
         session[:user_id] = nil
         flash[:success] = "You have logged out"
-        redirect_to shows_path
+        redirect_to login_path
     end
 end
  

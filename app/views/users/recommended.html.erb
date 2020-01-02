@@ -1,0 +1,7 @@
+<h1>OTHER SHOWS, BASED ON YOUR FAVORITES: </h1>
+<ul>
+<% @user.reco_shows.each do |show|%>
+<li><%= show.title %></li>
+<li><img src="<%= show.image %>"></li>
+<% end %>
+</ul>

@@ -12,13 +12,35 @@ class User < ApplicationRecord
        self.username.downcase!
     end
 
-    def liked_genre
-        @user_shows = self.shows
-        @genres = @user_shows.map do |show|
-            show.genre
-        end
-        byebug
+    def most_common_value(array)
+        #This evaluates the genre array and returns the most liked genres. 
+        array.group_by do |genre|
+            genre
+         end.values.max_by(&:size).first
     end
+
+    def liked_genre
+        @genre = self.shows.map{|show| show.genre }.compact
+        most_common_value(@genre)
+    end
+
+    def reco_shows
+        Show.all.find_all{|show| show.genre = self.liked_genre }
+    end
+
+
+
+# def most_common_values(array)
+#     #This evaluates the genre array and returns the most liked genres. 
+#     array.group_by do |genre|
+#         genre
+#      end.values.max_by(&:size).first
+# end
+
+# def u2
+#     @favs = Favorite.all.find_all{|favorite| favorite.show.genre = self.liked_genre }
+#     most_common_values(@favs).show.title
+# end
 
 
 end
