@@ -20,7 +20,7 @@
                         <%= f.label :"Confirm Password" %>
                         <%= f.password_field :password_confirmation, class: "form-control", placeholder: "PREFERRED PASSWORD", autofocus: true %>
                       <button class= "button1" type='submit'>Create Account</button>
-                     <button class= "button2" href="<%= login_path %>">Login Now</button>
+                     <a href="<%= login_path %>"><button class= "button2" >Login Now</button></a>
                   <%end %>
              </div>
          </div>

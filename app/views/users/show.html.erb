@@ -1,6 +1,47 @@
-<%= link_to 'logout', logout_path %>
-<h1> Welcome <%= @user.name.capitalize %></h1>
-<h3><%= link_to "SEE MY FAVS",user_favs_path  %></h3>
-<h3><%= link_to "DESTROY ACCOUNT",delete_account_path %></h3>
-<h3><%= link_to "EDIT ACCOUNT", edit_user_path%></h3>
-<h3><%= link_to "recommended", user_recommended_path %></h3>
+<%# <%= link_to 'logout', logout_path %>
+<%#<h1> Welcome <%= @user.name.capitalize %>
+<%#<h3><%= link_to "SEE MY FAVS",user_favs_path  %>
+<%#<h3><%= link_to "DESTROY ACCOUNT",delete_account_path %>
+<%#<h3><%= link_to "EDIT ACCOUNT", edit_user_path%>
+<%# <h3><%= link_to "recommended", user_recommended_path %>
+</br>
+</br>
+</br>
+ <h1>Welcome <%= @user.name %></h1>
+<div class="container">
+<% if @user.shows.count > 0  %>
+</br>
+        <h2> recently favorited: <a style="text-decoration : none"  href="<%= user_favs_path %>"><button>All Favorites</button></a> </h2>
+       </br>
+        <% @shows = @user.shows.last(5) %>
+            <% @shows.each do |show|%>
+                 <a href="<%= show_path(show)%>"><img src="<%= show.image %>"/></a>
+             <% end %>
+             </br>m 
+             </br>
+         <h2>All Recommendation</h2>  
+       </br>
+       <div class="container">
+        <% @reco = @user.reco_shows[0..4] %>
+            <% @reco.each do |show| %>
+            <img src="<%= show.image %>"/>
+            <% end %>
+        </div>
+<% else %>
+    <h1>Welcome! <%= @user.name %> </h1>
+    <br>
+    <h1>To get started, Click the shows page and add some shows to your favorites! </h1>
+    <h2>We recommend shows, based on your favorites. Everytime you add a new show our system, we 
+    automatically find shows based on your favorites!</h2>
+    <h3>Happy Binging!</h3>
+    </br>
+    </div>
+    <div class="container"
+    <h1><a style="text-decoration : none" href="<%= shows_path %>"><button class="button1" >All Shows</button></a> </h1>
+    <div class="container">
+    <% Show.all[0..7].each do |show| %>
+    <a href="<%= show_path(show)%>"><img src="<%= show.image %>"/></a>
+    <% end %>
+     </div>
+<% end %>
+

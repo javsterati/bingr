@@ -6,35 +6,23 @@
 }
 
 
-
 #leftImage{
     border:10px solid gray;
     left: 100px;
-    width: 24%;
-    height: 70%;
+    width: 20%;
+    height: 60%;
     position: fixed;
   }
 
-  #imgCaption{
-      color: gray;
-    text-align: center;
-    left: 100px;
-    top: 120px;
-    width: 24%;
-    height: 60%;
-    position: fixed;
-  } 
-
 #rightText{
-    border:1px solid gray;
-    top: 200px;
-    right: 100px;
+    top: 85px;
+    left: 550px;
     width: 55%;
-    height: 50%;
+    height: 100%;
     position: fixed;
 }
 
 #showText{
     padding: 10px 10px;
-    color: gray;
+    color: rgb(177, 177, 177);
 }

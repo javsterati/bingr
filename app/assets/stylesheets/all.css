@@ -24,14 +24,16 @@
 }
 .hoverbox a:hover .preview {
 	display: block;
+	padding-top: 50px;
 	position: absolute;
-	top: -43px;
+	top: -45px;
 	z-index: 1;
 }
 
 .hoverbox img {
 	color: inherit;
-    padding: 10px;
+	padding: 10px;
+	padding-top: 30px;
 	vertical-align: top;
 	width: 178px;
     height: 250px;

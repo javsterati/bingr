@@ -3,22 +3,20 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <title>BingrAppMaster</title>
+    <title>Bingr.</title>
     <%= csrf_meta_tags %> 
     <%= csp_meta_tag %> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     
-    <link href="https://fonts.googleapis.com/css?family=Sarabun:800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Oswald|Roboto+Condensed&display=swap" rel="stylesheet">
     <title>bingr.</title>
   </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="<%= user_path(session[:user_id]) %>">Bingr.</a>
+  <a class="navbar-brand"  href="<%= user_path(session[:user_id]) %>">Bingr.</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -40,7 +38,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="<%= edit_user_path(session[:user_id]) %>">Edit Account</a>
-          <a class="dropdown-item" href="<%= delete_account_path(session[:user_id]) %>"> Delete Account </a>
+          <%#<a class="dropdown-item" href="<%= delete_account_path(session[:user_id])"> Delete Account </a> %>
         </div>
       </li>
     </ul>

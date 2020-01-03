@@ -3,9 +3,12 @@
 
 </br>
 <img src="<%= @show.image %>" id="leftImage">
-<h4 id="imgCaption"><%= @show.genre %></h4>
+
 </br>
 <div id="rightText">
+<h3 id="showText"><%= @show.title %> --- <%= @show.genre %></h3>
+
+
 <h4 id="showText">Episode Count: <%= @show.episode_count %></h4>
 
 <p id="showText"><%=  strip_tags(@show.desc) %></p>
@@ -13,9 +16,9 @@
 <% @user = User.find(session[:user_id]) %>
 <% @fav = @user.favorites.find_by(show_id: @show.id)  %>
 <% if @fav %>
-    <%= link_to "REMOVE FROM FAVORTIES", delete_fav_path(@show) %>
+   <a style="text-decoration : none"  href="<%= delete_fav_path(@show) %>"><button class="button1">Remove Show from Favorites</button></a> </h1>
 <% else %>
-    <%= link_to "ADD TO FAVORITES", add_path(@show)%>
+    <a style="text-decoration : none"  href="<%= add_path(@show) %>"><button class="button1">Add To Favorites</button></a> </h1>
 <% end %>
 <br>
-<%= link_to "GO BACK", shows_path %></div>
+<a style="text-decoration : none"  href="<%= shows_path %>"><button class="button2">All shows</button></a> </h1>

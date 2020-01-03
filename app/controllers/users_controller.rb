@@ -15,29 +15,33 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to login_path, notice: "CREATED ACCOUNT"
         else 
-        render :new
+        render :new, layout: 'layouts/login'
       end 
    end 
    
    def show
-
+    redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
    end
 
    def favs
+    redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
     @user = User.find(params[:id])
     @shows = @user.shows
     
    end
 
    def recommended
+    redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
     @user = User.find(session[:user_id])
     @shows = @user.shows
    end
 
    def edit
+    redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
    end
 
    def update 
+    redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
     if @user.update(users_params)
       redirect_to login_path, notice: "ACCOUNT UPDATE"
       else 
@@ -46,7 +50,9 @@ class UsersController < ApplicationController
    end
 
    def destroy 
+      redirect_to( login_path flash[:danger] = "Login reduired") unless session.include? :user_id
       @user.favorites.destroy
+      @user.shows.destroy
       session[:user_id] = nil
       if @user.destroy
         redirect_to login_path, notice: "DELETED ACCOUNT"

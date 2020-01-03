@@ -14,7 +14,8 @@
                      <%= f.label :password %>
                      <%= f.password_field :password, class: "form-control", placeholder: "ENTER PASSWORD", autocomplete: "off" %>
                      <button class="button1" type="submit" >Login</button>
-                     <button class= "button2" href="<%= new_user_path %>" >Create Account</button>
+                     
+                     <a href="<%= new_user_path %>"><button class= "button2"  >Create Account</button></a>
                   <%end %>
              </div>
          </div>
