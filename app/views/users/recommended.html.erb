@@ -1,7 +1,13 @@
-<h1>OTHER SHOWS, BASED ON YOUR FAVORITES: </h1>
-<ul>
+<h1 style='text-align: center; color:gray;'><%= @user.name.capitalize %>'s Recommended Shows: </h1>
+<ul class="hoverbox">
+  <li class="li-first">
+  <% if @user.reco_shows%>
 <% @user.reco_shows.each do |show|%>
-<li><%= show.title %></li>
-<li><img src="<%= show.image %>"></li>
+    <a href="<%= show_path(show)%>"><img src="<%= show.image %>"  alt=" <%= show.title %> "/></a>
 <% end %>
+<% else %> 
+<h3>We can't recommend any shows at this time</h3>
+<% end %>
+</li> 
 </ul>
+

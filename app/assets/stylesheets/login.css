@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(17, 17, 17);
+    background-size: auto;
+    margin:0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    line-height: auto;
+    }
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 40%;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+}
+
+    
+.button1 {
+    display: inline;
+    background-color: rgb(122, 185, 50);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 7px 7px;
+    color: #fff;
+    margin-top: 16px;
+    transition: 0.3s;
+    }
+
+
+.button2 {
+    display: inline;
+    background-color: rgb(248, 118, 32);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: ;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 7px 7px;
+    color: #fff;
+    margin-top: 16px;
+    transition: 0.3s;
+  }
+
+  .button1:hover {
+    color: #fff;
+}
+  .button2:hover {
+      color: #fff;
+  }
+
+  
+  .container {
+    padding: auto;
+    margin: auto;
+    padding-top: 45%;
+    width: 80%;
+    overflow: hidden;
+}
+
+#main {
+    background-position: 50% 24%;
+    box-sizing: border-box;
+}
+
+
+.main-head{
+height: 150px;
+background: #FFF;
+
+}
+
+.sidenav {
+height: 100%;
+background-color: #000;
+margin-right: 70%;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+
+.main {
+padding: 0px 10px;
+margin-left: 47%; 
+}
+
+
+
+
+.sidenav{
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.login-form{
+    margin-top: 50%;
+    margin-bottom: 10px;
+}
+
+
+
+

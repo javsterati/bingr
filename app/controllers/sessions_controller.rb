@@ -3,8 +3,7 @@ class SessionsController < ApplicationController
         render :new, layout: 'layouts/login'
     end
 
-    def create 
-        
+    def create  
         @user = User.find_by(username: params[:session][:username].downcase)
         if @user && @user.password == (params[:session][:password])
             session[:user_id] = @user.id
@@ -12,9 +11,8 @@ class SessionsController < ApplicationController
             redirect_to user_path(@user)
         else 
             flash[:danger] = "NOPE!"
-            render:new 
+            render :new, layout: 'layouts/login'
         end
-        
     end
 
     def destroy

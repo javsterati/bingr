@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   resources :shows
   resources :users
   # resources :sessions
-  get 'home', to: 'users#welcome'
+  get '/', to: 'users#welcome', as: 'welcome'
   get 'user/delete/:id', to: 'users#destroy', as: 'delete_account'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  post 'logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy'
+  get 'logout', to: 'sessions#destroy'
   get '/delete/fav/:id', to: 'favorites#destroy', as: 'delete_fav'
   get '/add/:id', to: 'favorites#add', as: 'add'
   get '/users/favs/:id', to: 'users#favs', as: 'user_favs'

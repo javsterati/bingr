@@ -1,13 +1,21 @@
 
-<h1>Television Show: <%= @show.title %></h1>
-<h2><%= @show.genre %></h2>
+<h1 class="showhead"><%= @show.title %> - <%= @show.genre %></h1>
+
 </br>
-<img src="<%= @show.image %>">
+<img src="<%= @show.image %>" id="leftImage">
+<h4 id="imgCaption"><%= @show.genre %></h4>
 </br>
+<div id="rightText">
+<h4 id="showText">Episode Count: <%= @show.episode_count %></h4>
 
-<h3>Episode Count: <%= @show.episode_count %></h3>
+<p id="showText"><%=  strip_tags(@show.desc) %></p>
 
-<p><%=  strip_tags(@show.desc) %></p>
-<%= link_to "ADD TO FAVORITES", add_path(@show)%>
-
-
+<% @user = User.find(session[:user_id]) %>
+<% @fav = @user.favorites.find_by(show_id: @show.id)  %>
+<% if @fav %>
+    <%= link_to "REMOVE FROM FAVORTIES", delete_fav_path(@show) %>
+<% else %>
+    <%= link_to "ADD TO FAVORITES", add_path(@show)%>
+<% end %>
+<br>
+<%= link_to "GO BACK", shows_path %></div>

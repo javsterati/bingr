@@ -1,4 +1,10 @@
 
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
 .hoverbox {
 	list-style: none;
 }
@@ -20,28 +26,19 @@
 	display: block;
 	position: absolute;
 	top: -33px;
-	left: -45px;
 	z-index: 1;
 }
 
 .hoverbox img {
-	background: #fff;
 	color: inherit;
-    padding: 5px;
 	vertical-align: top;
-	width: 210px;
-    height: 295px;
     
 }
-
-<a href="<%show_path(@show)%>"><img src="<%= show.image %>"/></a>
 
 .hoverbox li {
 	color: inherit;
 	display: inline;
-	float: left;
-	padding: 5px;
-    position: relative;
+	float: center;
 }
 
 .hoverbox .preview {
@@ -60,11 +57,4 @@
   border: 1px solid black;
   opacity: 0.6;
     flex: 1;
-}
-.hover-box-text span
-{
-margin: 5%;
-  font-weight: bold;
-  color: #000000;
-
 }

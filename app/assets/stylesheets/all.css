@@ -1,0 +1,62 @@
+{
+    border: 0;
+    margin-top: 10px;
+	
+	padding: 0;
+}
+
+.hoverbox {
+	list-style: none;
+}
+
+.hoverbox a {
+	cursor: default;
+}
+
+.hoverbox a .preview {
+	display: none;
+}
+
+.li-first a:hover img{
+  -webkit-transition: all linear.5;
+  -webkit-transform: scale(1.2);
+  z-index: 2000;
+}
+.hoverbox a:hover .preview {
+	display: block;
+	position: absolute;
+	top: -43px;
+	z-index: 1;
+}
+
+.hoverbox img {
+	color: inherit;
+    padding: 10px;
+	vertical-align: top;
+	width: 178px;
+    height: 250px;
+    
+}
+
+.hoverbox li {
+	color: inherit;
+	display: inline;
+	float: center;
+}
+
+.hoverbox .preview {
+	width: 210px;
+	height: 280px;
+}
+
+.hover-box-text
+{
+  display: block;
+  margin: 20px;
+  height: 250px;
+  width:450px;
+}
+
+body {
+    background-color: rgb(8, 3, 3);
+    }

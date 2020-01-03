@@ -1,8 +1,8 @@
-
+<h1 style='text-align: center; color:gray;'>All Shows</h1>
 <ul class="hoverbox">
 <li class="li-first">
  <% @shows.each do |show| %>
-   <a href="<%= show_path(show)%>"><img src="<%= show.image %>"/></a>
+   <a href="<%= show_path(show)%>"><img src="<%= show.image %>"  alt=" <%= show.title %> "/></a>
     <% end %>
 </li>
 

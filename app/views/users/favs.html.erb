@@ -1,24 +1,8 @@
-<h1><%= @user.name %>'s favs </h1>
-<h2><%= link_to "Add More Shows", shows_path %></h2>
+<h1 style='text-align: center; color:gray;'><%= @user.name.capitalize %>'s Favorites </h1>
 
-<ul>
+<ul class="hoverbox">
+  <li class="li-first">
     <% @shows.each do |show| %>
-    <li><img src="<%= show.image %>"></li>
-    <li> <%= show.title %> <%= link_to "REMOVE FAVORITE", delete_fav_path(show) %></li> 
+    <a href="<%= show_path(show)%>"><img src="<%= show.image %>"/></a>
     <% end  %>
 </ul>
-
- <div class="container">
-        <div class="row">
-        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="gallery-title">Gallery</h1>
-        </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <% @shows.each do |show| %>
-                <a href="<% show_path(show) %>"><img src="<%=show.image%>"></a>
-                <a href="<% show_path(show) %>"><img src="<%=show.image%>"></a>
-                <% end %>
-            </div>
-    </div>
-</section>

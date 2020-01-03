@@ -20,12 +20,21 @@ class User < ApplicationRecord
     end
 
     def liked_genre
-        @genre = self.shows.map{|show| show.genre }.compact
-        most_common_value(@genre)
+        if self.shows.length > 0
+            @genre = self.shows.map{|show| show.genre }.compact
+            most_common_value(@genre)
+        else
+            @reco = nil 
+        end 
     end
 
     def reco_shows
-        Show.all.find_all{|show| show.genre = self.liked_genre }
+        if liked_genre
+            Show.all.find_all{|show| show.genre == self.liked_genre }
+        else
+            @reco = nil
+        end
+        
     end
 
 

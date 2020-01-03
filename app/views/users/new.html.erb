@@ -1,24 +1,28 @@
-<h1>CREATE ACCOUNT NOW  </h1>
 
-    <% if @user.errors.any? %>
-        <% @user.errors.full_messages.each do |message|%>
-        <h3><%= message %>  </h3>
-        <%end%>
-    <%end%>
-
-    </br>
-
-    <%= form_for @user do |f| %>
-        <%= f.label :NAME %>
-        <%= f.text_field :name %>
-        <%= f.label :AGE%>
-        <%= f.text_field :age%>
-        <%= f.label :USERNAME %>
-        <%= f.text_field :username %>
-        <%= f.label :PASSWORD %>
-        <%= f.password_field :password%>
-        <%= f.label :"Confirm Password" %>
-        <%= f.password_field :password_confirmation%>
-        </br>
-        <%= f.submit "SUBMIT"%>
-<% end %>
+<div class="sidenav">
+            <h2>Bingr.</h2>
+            <h3>your path to binging.</h3>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <div class="form-group">
+                  <h1 align="center">CREATE ACCOUNT</h1>
+                    <%= form_for @user do |f| %>
+                        <%= f.label :NAME %>
+                        <%= f.text_field :name, class: "form-control", placeholder: "ENTER NAME", autofocus: true %>
+                        <%= f.label :AGE%>
+                        <%= f.text_field :age, class: "form-control", placeholder: "ENTER AGE", autofocus: true %>
+                        <%= f.label :USERNAME %>
+                       <%= f.text_field :username, class: "form-control", placeholder: "PREFERRED USERNAME", autofocus: true %>
+                        <%= f.label :PASSWORD %>
+                        <%= f.password_field :password, class: "form-control", placeholder: "PREFERRED PASSWORD", autofocus: true %>
+                        <%= f.label :"Confirm Password" %>
+                        <%= f.password_field :password_confirmation, class: "form-control", placeholder: "PREFERRED PASSWORD", autofocus: true %>
+                      <button class= "button1" type='submit'>Create Account</button>
+                     <button class= "button2" href="<%= login_path %>">Login Now</button>
+                  <%end %>
+             </div>
+         </div>
+      </div>
+ </div>
