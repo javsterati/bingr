@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 
+gem "figaro"
 gem 'bootstrap', '~> 4.4.1'
 gem 'rest-client','~> 2.0.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
